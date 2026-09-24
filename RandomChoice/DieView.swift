@@ -50,8 +50,9 @@ struct DieView: View {
     var body: some View {
         VStack {
             
-            
+            // hideInstructions is set to false when the Xcode image asset is tapped
             if !hideInstructions {
+                // if the boolean hideInstructions is false then show the instructions
                 Text("Tap to Roll")
                     .font(.title2)
                     .foregroundColor(colorScheme == .dark ? .black : .white)
@@ -61,7 +62,7 @@ struct DieView: View {
                     .background(PointedBubble().fill(Color.blue))
                     .overlay(PointedBubble().stroke(Color.blue, lineWidth: 2))
                     .offset(y: bounce ? 10 : 20)
-                    .animation(
+                    .animation( // Up and down animation to make the text move with the shape
                         Animation
                             .easeInOut(duration: 0.5)
                             .repeatForever(autoreverses: true),
@@ -84,7 +85,8 @@ struct DieView: View {
             ZStack {
 
                 VStack {
-                    
+
+                    // change the Xcode image asset to the black image or the white one depending on the setting on the iPhone that sets the colorScheme
                     if colorScheme == .light {
                         Image(number == 1 ? "1l" : number == 2 ? "2l" : number == 3 ? "3l" : number == 4 ? "4l" : number == 5 ? "5l" : number == 6 ? "6l" : "?l")
                             .resizable()
@@ -110,8 +112,8 @@ struct DieView: View {
                 {
                     withAnimation
                     {
-                        number = Int.random(in: 1...6)
-                        rotation += Double(360*Double.random(in: 0.5...2))
+                        number = Int.random(in: 1...6) // grab a random integer from 1 to 6
+                        rotation += Double(360*Double.random(in: 0.5...2)) // create a random rotation value for the rotation animation
                         numRotate += 360*Int.random(in: 1...3)
                     }
                 }
