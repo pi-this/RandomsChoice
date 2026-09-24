@@ -1,3 +1,5 @@
+<img width="232" height="66" alt="Screenshot 2026-09-24 at 1 41 48 PM" src="https://github.com/user-attachments/assets/e28add27-87d0-4ac7-9611-da9aca6fce68" />
+<img width="321" height="150" alt="Screenshot 2026-09-24 at 1 42 06 PM" src="https://github.com/user-attachments/assets/a3a7b5cc-0710-4535-af32-816f12b031df" />
 # RandomsChoice
 
 <h4>Rolling a die off a table can be frustrating, but RandomsChoice allows families to play games without rolling the die onto the floor! </h4> 
